@@ -5,8 +5,9 @@ body {
   }
   
   footer {
-    background-color: plum;
+    background-color: #0000FF;
     grid-area: footer;
+    color: #ffffff;
   }
   
   aside {
@@ -38,22 +39,13 @@ body {
   
   .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  }
-
-  @media (min-width: 576px) {
-    .grid-container {
-      grid-template-columns: 4em 1fr;
-      grid-template-rows: 4em 1fr 4em;
-      grid-template-areas: "nav nav" "aside main" "footer footer";
-    }
-  }
-  
-  @media (min-width: 992px) {
-    .grid-container {
-      grid-template-columns: 7em 1fr;
-      grid-template-areas: "nav aside" "nav main" "footer main";
-    }
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+    grid-template-rows: 1fr;
+    grid-template-areas: "card-a";
   }
 
 .electric-car {
@@ -86,4 +78,71 @@ body {
 .filters-a p {
     margin: 0;
     padding-top: 10px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid gray;
+    border-radius: 2px;
+    padding: 30px;
+    gap: 5px;
+}
+
+button {
+    color: white;
+    background-color: #0000FF;
+    border-radius: 2px;
+    border: 0px;
+    width: 70px;
+    height: 40px;
+}
+
+.product h3 {
+    margin: 0;
+}
+
+.pagination-a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+}
+
+.paginat {
+    background-color: white;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card-a img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 576px) {
+    .grid-container {
+      grid-template-columns: 4em 1fr;
+      grid-template-rows: 4em 1fr 4em;
+      grid-template-areas: "nav nav" "aside main" "footer footer";
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .grid-container {
+      grid-template-columns: 7em 1fr;
+      grid-template-areas: "nav aside" "nav main" "footer main";
+    }
+  }
+
+.footer-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
