@@ -1,22 +1,22 @@
 body {
     background-color: #bad;
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
   }
   
   footer {
-    background-color: #0000FF;
+    background-color: #0000ffb2;
     grid-area: footer;
     color: #ffffff;
   }
   
   aside {
-    background-color: #E0E0E0;
+    background-color: #e0e0e0;
     grid-area: aside;
   }
   
   nav {
-    background-color: #0000FF;
+    background-color: #0000ff;
     grid-area: nav;
     display: flex;
     justify-content: space-between;
@@ -31,7 +31,7 @@ body {
   .grid-container {
     display: grid;
     height: 100vh;
-    width: 100vw;
+    width: 100vm;
     grid-template-columns: 1fr;
     grid-template-rows: 4em 4em 1fr 4em;
     grid-template-areas: "nav" "aside" "main" "footer";
@@ -44,43 +44,40 @@ body {
     align-items: center;
     gap: 20px;
     padding-top: 20px;
-    grid-template-rows: 1fr;
-    grid-template-areas: "card-a";
   }
-
-.electric-car {
-   color: white;
-   padding-left: 20px;
-   display: flex;
-   align-items: center;
-}
-
-.electric-car-h {
-    cursor: pointer;
-    padding-right: 20px;
+  
+  .electric-car {
     color: white;
-}
-
-.filters-a {
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .electric-car-h {
+    padding-left: 8em;
+    color: white;
+  }
+  
+  .filters-a {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     color: black;
-}
-
-.form-select-a {
+  }
+  
+  .form-select-a {
     width: 350px;
     border: 0;
     border-radius: 2px;
-}
-
-.filters-a p {
+  }
+  
+  .filters-a p {
     margin: 0;
     padding-top: 10px;
-}
-
-.card {
+  }
+  
+  .card {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,60 +86,130 @@ body {
     border-radius: 2px;
     padding: 30px;
     gap: 5px;
-}
-
-button {
+  }
+  
+  button {
     color: white;
-    background-color: #0000FF;
+    background-color: #0000ff;
     border-radius: 2px;
     border: 0px;
     width: 70px;
     height: 40px;
-}
-
-.product h3 {
+  }
+  
+  .product h3 {
     margin: 0;
-}
-
-.pagination-a {
+  }
+  
+  .pagination-a {
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 15px;
-}
-
-.paginat {
-    background-color: white;
-}
-
-.card img {
-    max-width: 100%;
-    height: auto;
-}
-
-.card-a img {
-    max-width: 100%;
-    height: auto;
-}
-
-@media (min-width: 576px) {
-    .grid-container {
-      grid-template-columns: 4em 1fr;
-      grid-template-rows: 4em 1fr 4em;
-      grid-template-areas: "nav nav" "aside main" "footer footer";
-    }
   }
   
-  @media (min-width: 992px) {
-    .grid-container {
-      grid-template-columns: 7em 1fr;
-      grid-template-areas: "nav aside" "nav main" "footer main";
-    }
+  .paginat {
+    background-color: white;
   }
-
-.footer-area {
+  
+  .footer-area {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-}
+    flex-direction: row;
+    gap: 5px;
+    padding-top: 5px;
+  }
+  
+  .footer-area-b {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .card img {
+    height: 300px;
+  }
+  @media (min-width: 576px) {
+    .grid-container {
+      grid-template-columns: 7em 1fr;
+      grid-template-areas: "nav aside" "nav main" "footer main";
+      grid-template-rows: 7em 1fr 7em;
+      height: 120vh;
+    }
+  
+    .electric-car-h {
+      display: none;
+    }
+  
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: 1fr;
+      justify-items: center;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+    }
+    nav {
+      background-color: #0000ff;
+      display: flex;
+      justify-content: space-between;
+      align-items: first baseline;
+      flex-direction: column;
+    }
+    .electric-car h2 {
+      font-size: 0.7em;
+      padding-top: 15px;
+    }
+    .menu-area {
+      color: #ffffff;
+      padding-bottom: 200px;
+    }
+    .menu-area ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding-bottom: 27em;
+      padding-left: 25px;
+    }
+    .footer-area-b {
+      font-size: 10px;
+    }
+    .footer-area-b p {
+      padding-left: 15px;
+    }
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 100px;
+    }
+  
+    .card {
+      max-width: 200px;
+      padding: 10px;
+    }
+  
+    .card img {
+      width: 100%;
+      max-height: 200px;
+    }
+  
+    .product h3 {
+      font-size: 15px;
+    }
+  }
+  
+  @media (max-width: 575px) {
+    /* Oculta las listas en versiones móviles, 2da card en adelante en mobile*/
+    ul {
+      display: none;
+    }
+    .card:nth-child(n + 2) {
+      display: none;
+    }
+  }
